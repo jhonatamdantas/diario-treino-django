@@ -1,0 +1,21 @@
+{% extends 'treinos/base.html' %}
+
+{% block content %}
+    <div class="treino-container" style="text-align: center;">
+        <h1 class="titulo-treino" style="color: #ff4444;">Eliminar Treino?</h1>
+        
+        <p>Tem a certeza que deseja apagar o seguinte treino do seu histórico?</p>
+        
+        <div style="background-color: #2a2a35; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+            <strong>{{ object.exercicio }}</strong><br>
+            Carga: {{ object.carga }} kg | Séries: {{ object.series }}x{{ object.repeticoes }}
+        </div>
+        
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit" class="btn-salvar" style="background-color: #ff4444; color: white;">Sim, Apagar Definitivamente</button>
+            
+            <a href="{% url 'dashboard' %}" class="btn-salvar" style="background-color: #555; text-decoration: none; display: inline-block; box-sizing: border-box; text-align: center;">Cancelar e Voltar</a>
+        </form>
+    </div>
+{% endblock %}

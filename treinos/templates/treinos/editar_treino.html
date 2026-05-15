@@ -1,0 +1,14 @@
+{% extends 'treinos/base.html' %}
+
+{% block content %}
+    <div class="treino-container">
+        <h1 class="titulo-treino">Editar Treino</h1>
+        
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            
+            <button type="submit" class="btn-salvar">Salvar Alterações</button>
+        </form>
+    </div>
+{% endblock %}

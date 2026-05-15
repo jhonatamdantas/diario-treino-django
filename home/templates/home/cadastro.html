@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro - Diário de Treino</title>
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    <style>
+        .login-container p { text-align: left; color: #aaa; font-weight: bold; margin-bottom: 15px; }
+        .login-container p input { width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #333; background-color: #2a2a35; color: white; margin-top: 5px; }
+        .login-container p input:focus { outline: none; border-color: #00ff88; }
+        .helptext { font-size: 0.8rem; color: #777; font-weight: normal; display: block; margin-top: 5px; }
+        ul.errorlist { color: #ff4444; list-style: none; padding: 0; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h1 class="titulo-login">Criar Conta</h1>
+        
+        <form method="POST">
+            {% csrf_token %}
+            
+            {{ form.as_p }}
+            
+            <button type="submit" class="btn-entrar">Finalizar Cadastro</button>
+        </form>
+
+        <div class="cadastro-link">
+            <p>Já possui uma conta?</p>
+            <a href="{% url 'login' %}" class="btn-cadastrar">Voltar para o Login</a>
+        </div>
+    </div>
+
+</body>
+</html>

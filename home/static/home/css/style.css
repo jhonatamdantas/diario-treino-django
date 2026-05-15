@@ -1,0 +1,102 @@
+/* home/static/home/css/style.css */
+:root {
+    --bg-color: #121212;
+    --card-bg: #1e1e24;
+    --primary-color: #00ff88;
+    --text-light: #e0e0e0;
+    --border-color: #333;
+    --error-color: #ff4444;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa a altura total da tela para centralizar perfeitamente */
+    margin: 0;
+}
+
+.login-container {
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    width: 100%;
+    max-width: 525px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.titulo-login {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #aaa;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: #2a2a35;
+    color: white;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.erro-login {
+    color: var(--error-color);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.btn-entrar {
+    background-color: var(--primary-color);
+    color: #121212;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+.btn-entrar:hover {
+    background-color: #00cc6a;
+}
+
+.cadastro-link p {
+    margin-bottom: 10px;
+    color: #888;
+}
+
+.btn-cadastrar {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-cadastrar:hover {
+    text-decoration: underline;
+}

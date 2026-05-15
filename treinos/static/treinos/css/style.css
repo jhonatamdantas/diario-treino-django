@@ -1,0 +1,83 @@
+/* treinos/static/treinos/css/style.css */
+
+:root {
+    --bg-color: #121212;
+    --card-bg: #1e1e24;
+    --primary-color: #00ff88; /* Verde neon estilo fitness */
+    --text-light: #e0e0e0;
+    --border-color: #333;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-light);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    margin: 0;
+}
+
+.treino-container {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid var(--border-color);
+}
+
+h1.titulo-treino {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+/* Estilização automática para os parágrafos gerados pelo form.as_p */
+.treino-container p {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.treino-container label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #aaa;
+}
+
+.treino-container input, 
+.treino-container select {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: #2a2a35;
+    color: white;
+    font-size: 1rem;
+}
+
+.treino-container input:focus, 
+.treino-container select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.btn-salvar {
+    background-color: var(--primary-color);
+    color: #121212;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn-salvar:hover {
+    background-color: #00cc6a;
+}
